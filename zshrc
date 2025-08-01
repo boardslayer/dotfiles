@@ -148,7 +148,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
     source /opt/homebrew/opt/chruby/share/chruby/auto.sh
     chruby ruby-3.3.5 # run chruby to see actual version
-    neofetch
+    
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Linux specific configurations
     
@@ -166,7 +166,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export OLLAMA_ORIGINS=safari-web-extension://*
     # Created by `pipx` on 2024-10-31 21:33:07
     export PATH="$PATH:/home/priyansh/.local/bin"
-    neofetch
+    
 else
     echo "Unknown OS: $OSTYPE"
 fi
