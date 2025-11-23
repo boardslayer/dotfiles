@@ -10,7 +10,7 @@
 			"type": "text"
 		},
 		{
-			"name": "owner",
+			"name": "repo owner",
 			"value": "{{meta:name:octolytics-dimension-user_login}}",
 			"type": "text"
 		},
@@ -25,24 +25,25 @@
 			"type": "text"
 		},
 		{
-			"name": "stars",
-			"value": "{{selector:#repo-stars-counter-star}}",
-			"type": "number"
-		},
-		{
 			"name": "tags",
-			"value": "github, repo, {{selector:.topic-tag|join:\\\", \\\"}}",
+			"value": "github, repo, reference, {{selector:.topic-tag|join:\\\", \\\"}}",
 			"type": "multitext"
 		},
 		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
+			"name": "parent-note/TOC",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "release",
+			"value": "",
+			"type": "text"
 		}
 	],
 	"triggers": [
-		"https://github.com/"
+		"https://github.com/",
+		"https://gitlab.eurecom.fr"
 	],
-	"noteNameFormat": "{{meta:name:octolytics-dimension-user_login}} {{selector:#repo-title-component a}}: {{selector:.Layout-sidebar p|first}}",
-	"path": "00-Inbox/github"
+	"noteNameFormat": "{{selector:#repo-title-component a}} - {{selector:.Layout-sidebar p|first}}",
+	"path": "Inbox/github"
 }

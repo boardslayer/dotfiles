@@ -33,10 +33,25 @@
 			"name": "tags",
 			"value": "clippings",
 			"type": "multitext"
+		},
+		{
+			"name": "parent-note/TOC",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "category",
+			"value": "Permanent",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "Complete",
+			"type": "text"
 		}
 	],
 	"triggers": [],
 	"noteNameFormat": "{{title}}",
-	"path": "00-Inbox",
+	"path": "Inbox",
 	"context": "{{content|slice:0,100000}}"
 }
