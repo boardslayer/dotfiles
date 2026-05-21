@@ -33,6 +33,7 @@ curl -sS https://starship.rs/install.sh | sh
 mkdir -p ~/.config/
 cp -r nvim ~/.config/
 cp zshrc ~/.zshrc
+cp bashrc ~/.bashrc
 cp tmux.conf ~/.tmux.conf
 cp -r yazi ~/.config/
 cp starship.toml.server ~/.config/starship.toml
