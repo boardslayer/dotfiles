@@ -6,10 +6,16 @@ set -e # Exit immediately if a command exits with a non-zero status
 
 echo "Starting setup..."
 
-# 1. Clone the dotfiles repository
-git clone https://github.com/priyanshs/dotfiles
-cd dotfiles || exit
+# Detect actual running kernel — /bin/sh may be bash on macOS, so check uname first.
+case "$(uname -s)" in
+  Darwin) printf '[install.sh] Detected mac; skipping Linux-only Docker + nodesource steps.\n' && _mac_install ;;
+  *)      printf "[install.sh] Running linux build (detected $(uname -s)).\n"
+          ;;
+esac
 
+# 1. Clone the dotfiles repository (if you haven't already)
+if [ ! -f install.sh ]; then
+ 
 # 2. Install ZSH, Tmux and Homebrew
 sudo -E apt update
 sudo -E apt install -y zsh tmux curl
